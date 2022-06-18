@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포트폴리오</title>
+    <link rel="stylesheet" href="./css/portfolio.css">
+    <link rel="stylesheet" href="./css/common.css">
+
+</head>
+
+<body>
+    <div id="wrap">
+
+        <section>
+            <header><span id="darkMode" class="whiteFont">DARK</span></header>
+            <div id="smallCircle" class="whiteBackground"></div>
+            <div class="whiteFont fontsize15rem subject bold">Hi,</div>
+            <div class="whiteFont fontsize10rem subject bold line80">
+                IM SUNG <br>
+                JUN
+            </div>
+            <div id="bigCircle" class="whiteBackground" data-id="sungjun"></div>
+        </section>
+
+        <section>
+
+            <div class="whiteFont fontsize5rem bold centerTextBox10">
+                SUNGJUN'S PRTFOLIO
+            </div>
+
+            <div id="aboutme" class="bold centerTextBox10 fontsize2rem whiteBackground">
+                ABOUT ME
+            </div>
+
+            <div>
+                <p class="fontsize5rem whiteFont bold subject">SKILLS</p>
+                <div class="flexAlignStart">
+                    <div class="whiteboxWidth whiteBox17rem"></div>
+
+                    <div>
+                        <div class="whiteboxWidth whiteBox7rem"></div>
+                        <div class="whiteboxWidth whiteBox13rem"></div>
+                    </div>
+
+                    <div class="whiteboxWidth whiteBox13rem"></div>
+                    <div class="whiteboxWidth whiteBox20rem"></div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="flexCenter">
+            <div id="projectBox" class="whiteBackground flexCenter">
+                PROJECT 01
+            </div>
+        </section>
+
+        <section>
+            <div class="whiteFont fontsize5rem bold subject contact">
+                Contact Me
+            </div>
+            <div class="footer whiteBackground"></div>
+        </section>
+
+    </div>
+
+    <script>
+        window.onload = function () {
+            // console.log(document.getElementById("bigCircle").getAttribute("data-id"));
+
+            // console.log(document.getElementById("bigCircle").getAttribute("class"));
+
+            doucument.doucumentElement.setAttribute("color-theme", "pink");
+            // 최 상위 root에 이 속성을 셋팅해준 것
+        };
+
+        let darkMode = document.getElementById("darkMode");
+
+        darkMode.addEventListener("click", (e) => {
+            // e --> 이벤트가 일어난 객체
+            // e.target --> 이벤트가 일어난 객체를 선택
+            // e.target.innerText -> 일어난 객체를 선택해서 innerText 속성을 선택
+
+            if (e.target.innerText === "DARK") {
+                document.documentElement.setAttribute("color-theme", "dark");
+                e.target.innerText = "PINK";
+            } else {
+                document.documentElement.setAttribute("color-theme", "pink");
+                e.target.innerText = "DARK";
+            }
+        })
+
+    </script>
+
+
+</body>
+
+</html>
